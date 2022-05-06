@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a img {
+  opacity: 0.5;
+}
+
+a:hover p {
+  color: #00bcd4;
+}
+
+a:hover img {
+  opacity: 1;
+}
+
+p {
+  text-align: center;
+}
+
+.App {
+  background-color: #1c1c1c;
+}
+
+.Login,
+.Register,
+.Admin,
+.UserDashboard
+,.Movie {
+  background-color: #1c1c1c;
+  min-height: 100vh;
+padding:20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro-logo {
+  height: 100vh;
+  transform: translateX(-150%);
+}
+
+.loaded {
+  transition: 1500ms cubic-bezier(1, 1, 1, 1.28);
+  transform: translateX(0%) !important;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.welcome-greeting img {
+  height: 100px;
+}
+
+.welcome {
+  height: 100vh;
+}
+
+.images-in-row img {
+  height: 200px;
+  filter: invert(1);
+}
+
+.image-link {
+  height: 200px;
+}
+
+.user-img {
+  width: 200px;
+  object-fit: contain;
+  margin-top: 78px;
+  margin-bottom: 50px;
+  height: 106px !important;
+}
+
+.input-grp {
+  justify-content: space-between;
+}
+
+.input-grp h1 {
+  margin: 10px;
+}
+
+.input-grp input {
+  padding: 20px;
+  width: 300px;
+  height: 45px;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.login-container {
+  align-items: end;
+}
+
+.login-container button,
+.Admin button,
+.UserDashboard button,
+.SearchMechanic button {
+  margin: 20px;
+  margin-right: 0;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  background: #1c1c1c;
+  box-shadow: 9px 9px 29px #111111,
+    -9px -9px 29px #272727;
+}
+
+.login-container button:hover,
+.UserDashboard button:hover,
+.SearchMechanic button:hover,
+.list-wrapper button:hover {
+  border-radius: 20px;
+  background: #1c1c1c;
+  box-shadow: inset 9px 9px 29px #111111,
+    inset -9px -9px 29px #272727;
+}
+
+.UserDashboard button:hover,
+.SearchMechanic button:hover,
+.list-wrapper button:hover a {
+  color: #00bcd4;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.Login a,.link {
+  color: #00bcd4;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+.Login>h1,
+.Admin>h1 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.view-mechanics,
+.request-cards {
+  padding: 30px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  background: #1c1c1c;
+  box-shadow: inset 9px 9px 29px #111111,
+    inset -9px -9px 29px #272727;
+}
+
+.view-mechanics::-webkit-scrollbar,
+.request-cards::-webkit-scrollbar {
+  width: 1px;
+}
+
+.mechanic-card,
+.request-card {
+  margin: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #1c1c1c;
+  box-shadow: 9px 9px 29px #111111,
+    -9px -9px 29px #272727;
+}
+
+.mechanic-card>div {
+  padding: 20px;
+}
+
+.mechanic-card {
+  position: relative;
+}
+
+.mechanic-card>img {
+  filter: invert(1);
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+}
+
+.left {
+  justify-content: start;
+}
+
+.list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Admin {
+  max-height: 100vh;
+}
+
+.view-mechanics {
+  font-size: 15px;
+  height: 70vh;
+  margin: 20px;
+}
+
+.list-wrapper a:hover button {
+  color: #00bcd4;
+}
+
+.container,
+.request-cards {
+  margin: 20px;
+}
+
+.margin-10 input {
+  margin: 10px;
+}
+
+.rel {
+  position: relative;
+}
+.mechid {
+  position: absolute;
+  top: -10px;
+  right: 70px;
+  font-size: 100px;
+  opacity: 0.7;
+}
+
+.request-cards {
+  max-height: 100vh;
+}
+
+.locationbutton {
+  width: 200px !important;
+}
+.location{
+align-items: flex-start;}
+.right {
+  align-items: flex-end;
+}
+.top > * {
+  margin: 10px;
+}
+.mid {
+  justify-content: space-between;
+  align-items: start;
+}
+.top > img {
+  height: 100px;
+  border-radius: 50%;
+  width: 100px;
+}
+.genre {
+  min-width: 400px;
+}
+.genreItem {
+  margin: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.genreItem:hover h4{
+  color: #00bcd4;
+}
+.movie-list {
+  flex-wrap: wrap;
+}
+.movie-item {
+  margin: 10px;
+  cursor: pointer;
+}
+.movie-logo {
+  height: 300px;
+  width: 300px;
+}
+
+
+.movie-logo-banner {
+  top: 25px;
+  left: 25px;
+  height: 400px ;
+  width: 300px ;
+  
+}
+
+.movie-logo-container{
+  position: relative;
+  width: 350px ;
+  height: 450px ;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 16px;
+background: #1c1c1c;
+box-shadow: inset 11px 11px 22px #0e0e0e,
+            inset -11px -11px 22px #2a2a2a;
+}
+
+.movie-top {
+  justify-content: space-between;
+  align-items: start;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+.movie-details {
+  padding: 20px;
+  margin: 20px;
+}
+.rating img{
+  width: 30px;
+  height: 30px;
+}
+.norating img {
+  width: 30px;
+  height: 30px;
+  filter: invert(0.5);
+}
+
+.master-review ,.write-review {
+  width: 90vw;
+  height: auto;
+}
+
+h2 {
+  font-weight: 400!important;
+}
+
+.user-image {
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 50%;
+  height: 50px;
+  width: 85px;
+  font-size: 45px;
+  background-color: #00bcd4;
+}
+.user-review {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+    border: 1px solid white;
+}
+.user-review h3{
+  margin: 20px;
+}
+
+.ratings-block {
+  width: 90vw;
+  justify-content: space-between;
+}
+
+.write-review textarea,.write-review input {
+  padding: 20px;
+  border-radius: 10px;
+  outline: 1px solid #00bcd4;
+  color: white;
+  width: 100%;
+  background-color: #2a2a2a;
+  height: 200px;
+}
+
+.write-review input{
+  padding: 10px;
+  margin-top: 30px;
+  height: 50px;
+}
+.write-review {
+  align-items: flex-start;
+}
+
+.write-review button {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.write-review button:hover {
+  background-color: #00bcd4;
+  color: black;
+}
+
+.fb .rating img {
+  width: 30px;
+  height: 30px;
+}
+
+.lite {
+  font-weight: 300;
+}
