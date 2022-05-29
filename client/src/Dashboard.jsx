@@ -38,7 +38,7 @@ function Dashboard() {
     });
   }
   const [genre, setGenre] = useState('');
-  const [genreList, setgenreList] = useState(['fiction', 'action', 'comedy', 'drama', 'horror', 'romance', 'thriller','All']);
+  const [genreList, setgenreList] = useState(['fiction', 'action', 'comedy', 'drama', 'horror', 'romance', 'thriller', 'All']);
   useEffect(() => {
     Axios.get(
       `http://localhost:3001/Movies`
@@ -46,12 +46,18 @@ function Dashboard() {
       setMovieList(response.data);
     });
   }, [])
-  
+
   return (
     <div className="UserDashboard">
-      <div className="top flex row left">
-        <img src={logo} alt="" className="logo" />
-        <h1>Name of the APP</h1>
+      <div className="top flex row left sb">
+        <div className="group top flex row left">
+          <img src={logo} alt="" className="logo" />
+          <h1>Name of the APP</h1>
+        </div>
+        <Link to="/LoginUser">
+          <button className="btn">Logout</button>
+        </Link>
+
       </div>
       <div className="mid flex row">
         <div className="genre flex col">
@@ -70,30 +76,30 @@ function Dashboard() {
           {
             movieList.map((movie, index) => (
               <>
-                {genre==='' &&
-                <div onClick={() => {
-                  setCurrentMovie(getMovie(movie.movieid));
-                }} key={index} className="movie-item flex">
-                  <Link to="/MovieReview">
-                    <img src={movie.movielogo} alt="" className="movie-logo" />
-                  </Link>
-                </div>}
-                {movie.genre===genre &&
-                <div onClick={() => {
-                  setCurrentMovie(getMovie(movie.movieid));
-                }} key={index} className="movie-item flex">
-                  <Link to="/MovieReview">
-                    <img src={movie.movielogo} alt="" className="movie-logo" />
-                  </Link>
-                </div>}
-                {genre==='All' &&
-                <div onClick={() => {
-                  setCurrentMovie(getMovie(movie.movieid));
-                }} key={index} className="movie-item flex">
-                  <Link to="/MovieReview">
-                    <img src={movie.movielogo} alt="" className="movie-logo" />
-                  </Link>
-                </div>}
+                {genre === '' &&
+                  <div onClick={() => {
+                    setCurrentMovie(getMovie(movie.movieid));
+                  }} key={index} className="movie-item flex">
+                    <Link to="/MovieReview">
+                      <img src={movie.movielogo} alt="" className="movie-logo" />
+                    </Link>
+                  </div>}
+                {movie.genre === genre &&
+                  <div onClick={() => {
+                    setCurrentMovie(getMovie(movie.movieid));
+                  }} key={index} className="movie-item flex">
+                    <Link to="/MovieReview">
+                      <img src={movie.movielogo} alt="" className="movie-logo" />
+                    </Link>
+                  </div>}
+                {genre === 'All' &&
+                  <div onClick={() => {
+                    setCurrentMovie(getMovie(movie.movieid));
+                  }} key={index} className="movie-item flex">
+                    <Link to="/MovieReview">
+                      <img src={movie.movielogo} alt="" className="movie-logo" />
+                    </Link>
+                  </div>}
               </>
             ))
           }
